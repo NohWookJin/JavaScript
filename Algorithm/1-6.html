@@ -12,10 +12,32 @@
     <script>
         // 10월 21일 금요일 풀이
         // 섹션 1 - 6. 홀수
-        function solution() {
+        function solution(arr) {
+            // answer1 = 홀수의 합 // answer2 = 최솟값
+            let answer1 = 0;
+            let answer2 = [];
+            let min = Number.MAX_SAFE_INTEGER;
 
-            return answer;
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i] % 2 != 0){
+                    answer1 = answer1 + arr[i];
+                    if(arr[i] < min){
+                        min = arr[i];
+                    }
+                }
+            }
+            answer2.push(answer1);
+            answer2.push(min);
+            return answer2;
+            
         }
+
+        // let arr = [12,77,38,41,53,92,85];
+
+        // 입력 1 / 출력 2
+        // 홀수의 합
+        // 홀수 중 최솟값
+
     </script>
 </body>
 
