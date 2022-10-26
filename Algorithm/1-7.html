@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 10월 26일 수요일 풀이
+        // 섹션 1 - 7. 10부제
+        function solution(date, car) {
+            let count = 0;
+
+            car.map((list)=>{
+                let str = String(list);
+                if(str[1] === String(date)){
+                    count ++;
+                }
+            })
+            return count;
+        }
+
+        let date = [3];
+        let car = [25,23,11,47,53,17,33];
+        console.log(solution());
+
+        // 입력 : 날짜의 일의 자리 숫자, 7대의 자동차 번호 끝 두자리
+        // 출력 : 10부제를 위반하는 차량의 대수
+    </script>
+</body>
+</html>
