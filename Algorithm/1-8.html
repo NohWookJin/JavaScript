@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 10월 29일 토요일 풀이
+        // 섹션 1 - 8. 일곱 난쟁이
+        function solution(people) {
+            let answer = people;
+
+            let sum = people.reduce((a, b)=> a+b, 0);
+            
+            for(let i = 0; i<people.length-1; i++){
+                for(let j = i + 1; j<people.length; j++){
+                    if(sum - (people[i] + people[j]) === 100 ){
+                        people.splice(i, 1);
+                        people.splice(j-1, 1);
+                    }
+                }
+            }
+            return answer;
+        }
+
+        let people = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+
+        // 입력 : 아홉 난쟁이들 키
+        // 출력 : 합이 100인 일곱 난쟁이들의 키 리스트
+
+        // 전체 키를 구한다
+        // 아홉 난쟁이 키 - 100 = 가짜 두 명의 키 합
+
+        // 둘의 합이 40인 원소 둘을 제외한다.
+    </script>
+</body>
+
+</html>
