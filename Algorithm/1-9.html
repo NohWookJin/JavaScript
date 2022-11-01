@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 01일 화요일 풀이
+        // 섹션 1 - 9. A를 #으로
+        
+        function solution(words) {
+            let answer = "";
+
+            for(let i = 0; i < words.length; i++){
+                if(words[i] == "A" || words[i] == "a"){
+                    answer = answer.concat("#");
+                } 
+                else {
+                    answer = answer.concat(words[i]);
+                }
+            }
+            return answer;
+        }
+        let words = "BaNANa";
+
+        // 입력 : 문자열 한 줄
+        // 출력 : a, A를 #으로 변환 
+    </script>
+</body>
+
+</html>
