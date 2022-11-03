@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 03일 목요일 풀이
+        // 섹션 1 - 13. 대소문자 변환
+        function solution(str) {
+            let answer = "";
+            const upper = /[A-Z]/g;
+            const lower = /[a-z]/g;
+
+            for(let i = 0; i<str.length; i++){
+                if(str[i].match(upper)){
+                    answer = answer.concat(str[i].toLowerCase());
+                } else if(str[i].match(lower)) {
+                    answer = answer.concat(str[i].toUpperCase());
+                } else {
+                    answer = answer.concat(str[i]);
+                }
+            }
+            return answer;
+        }
+
+        let str = "stuDY";
+
+        // 입력 : 첫 줄엔 문자열이 입력됨. 길이는 100 이하.
+        // 출력 : 첫 줄에 대문자는 소문자로, 소문자는 대문자로 변환된 문자열이 출력됨.
+    </script>
+</body>
+
+</html>
