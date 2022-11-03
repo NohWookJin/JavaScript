@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 03일 목요일 풀이
+        // 섹션 1 - 11. 대문자 찾기
+        function solution(str) {
+            let count = 0;
+            const regex = /[A-Z]/g;
+            const upperCase = str.match(regex);
+            upperCase.map(()=>{
+                count++;
+            })
+
+            return count;
+        }
+
+        let str = "KoreaTimeGood";
+        console.log(solution());
+
+
+        // 입력 : 첫 줄엔 문자열이 입력됨. 길이는 100 이하.
+        // 출력 : 첫 줄에 대문자의 개수를 출력
+    </script>
+</body>
+
+</html>
