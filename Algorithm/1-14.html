@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 04일 금요일 풀이
+        // 섹션 1 - 14. 가장 긴 문자열
+        function solution(count, ...args) {
+            let answer;
+            let arr = args;
+            let minLength = 0;
+
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i].length > minLength){
+                    minLength = arr[i].length;
+                    answer = arr[i];
+                }
+            }
+            return answer;
+        }
+        solution();
+
+        // 입력
+        // 첫 줄엔 자연수 N(3 <= N <= 30),
+        // 두 번째 줄부터 N개의 문자열이 주어짐. 문자열의 길이는 100 미만.
+        // 각 문자열의 길이는 서로 다름.
+
+        // 출력 : 첫 줄에 가장 긴 문자열이 출력됨.
+    </script>
+</body>
+
+</html>
