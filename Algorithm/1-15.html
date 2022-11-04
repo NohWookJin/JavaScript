@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 04일 금요일 풀이
+        // 섹션 1 - 15. 가운데 문자 출력
+        function solution(str) {
+            let answer;
+            let even = "";
+            let odd = "";
+
+            if(str.length % 2 === 0){
+                even = even.concat(str[(str.length / 2) - 1]);
+                even = even.concat(str[str.length / 2]);
+                answer = even;
+            } else {
+                odd = odd.concat(str[Math.floor(str.length / 2)]);
+                answer = odd;
+            }
+            return answer;
+        }
+
+        solution();
+
+        // 입력 : 첫 줄엔 문자열이 입력. 문자열의 길이는 100 이하.
+        // 출력 : 첫 줄 가운데 문자가 출력됨. (단어의 길이가 짝수일 경우 가운데 2개의 문자가 출력되야함)
+
+        // 길이 = 6의 가운데 글자는 3과 4 // 길이 = 4의 가운데 글자는 2와 3
+        // 길이 = 5의 가운데 글자는 3
+
+    </script>
+</body>
+
+</html>
