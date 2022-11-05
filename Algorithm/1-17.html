@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 05일 토요일 풀이
+        // 섹션 1 - 17. 중복 단어 제거
+        function solution(num, ...args) {
+            let answer = [];
+            let arr = args;
+            arr.map((list, index)=>{
+                // console.log(list, index, arr.indexOf(list));
+                if(arr.indexOf(list) === index) answer.push(list);
+            })
+            return answer;
+        }
+
+        console.log(solution(5, "good", "time", "good", "time", "student"));
+
+        // 입력
+        // 첫 줄엔 자연수 N(3 <= N <= 30) 
+        // 두번째 줄부터 N개의 문자열이 주어짐. 문자열의 길이는 100 이하.
+
+        // 출력 : 첫 줄부터 중복이 제거된 문자열을 차례대로 출력.
+    </script>
+</body>
+
+</html>

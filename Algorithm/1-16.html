@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 11월 05일 토요일 풀이
+        // 섹션 1 - 16. 중복 문자 제거
+        function solution(str) {
+            let answer = "";
+
+            for(let i = 0; i < str.length; i++){
+                console.log(str[i], i, str.indexOf(str[i]));
+                if(str.indexOf(str[i]) === i) answer += str[i];
+            }
+
+            return answer;
+        }
+
+        console.log(solution("ksekkset"));
+
+        // 입력 : 문자열이 입력됨.
+        // 출력 : 중복문자가 제거된 문자열이 출력됨.
+    </script>
+</body>
+
+</html>
