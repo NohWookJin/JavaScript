@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 11월 10일 목요일 풀이
+      // 섹션 2 - 02. 보이는 학생
+      function solution(args) {
+        let answer = 1;
+
+        for (let i = 0; i < args.length; i++) {
+          if (args[i] < args[i + 1]) answer++;
+        }
+
+        return answer;
+      }
+
+      // 입력 : 첫 줄엔 정수 N, 다음줄에 N명의 학생의 키가 앞에서부터 순서대로 주어짐.
+      // (8)(130 135 148 145 150 150 153)
+      // 출력 : 선생님이 볼 수 있는 최대학생수를 출력함.
+      // 5
+    </script>
+  </body>
+</html>
