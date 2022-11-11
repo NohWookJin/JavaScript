@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 11월
+      // 섹션 2 - 03. 가위 바위 보
+      function solution(a, b) {
+        let count = "";
+        const aInfo = [...a];
+        const bInfo = [...b];
+
+        for (let i = 0; i < a.length; i++) {
+          if (aInfo[i] === bInfo[i]) count += "D";
+          else if (aInfo[i] === 1 && bInfo[i] === 2) count += "B";
+          else if (aInfo[i] === 2 && bInfo[i] === 3) count += "B";
+          else if (aInfo[i] === 3 && bInfo[i] === 1) count += "B";
+          else count += "A";
+        }
+
+        return count;
+      }
+
+      const a = [1, 3, 3, 1, 3];
+      const b = [2, 1, 2, 2, 3];
+      console.log(solution(a, b));
+
+      // 가위 : 1, 바위 : 2, 보 : 3
+      // 입력 : 첫 번째 줄엔 게임 횟수인 자연수 N / 둘째 줄엔 A가 낸 가위, 바위, 보 정보 N개 / 세 번째 줄엔 B가 낸 가위, 바위, 보 정보 N개
+      //  5, 2 3 3 1 3, 1 1 2 2 3
+      // 출력 : 각 줄에 각 회의 승자 출력됨. 비겼을 경우 D 출력
+      // A B A B D
+    </script>
+  </body>
+</html>
