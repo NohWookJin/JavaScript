@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 11월 14일 월요일 풀이
+      // 섹션 2 - 04. 점수 계산
+      function solution(submit) {
+        let answer = 0;
+
+        if (submit.indexOf(0) === 1) {
+          answer = 1;
+        } else {
+          answer = 0;
+        }
+
+        for (let i = 1, j = 1; i < submit.length; i++) {
+          let count = 1;
+
+          if (submit[i] === 1) {
+            if (submit[i - 1] === 1) {
+              j++;
+              answer += j;
+            } else {
+              j = 1;
+              answer += 1;
+            }
+          } else {
+            answer += 0;
+          }
+        }
+        return answer;
+      }
+
+      const submit = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+      console.log(solution(submit));
+
+      // 연속으로 정답을 맞힐 경우 N+1점, 앞의 문제를 틀린 후 맞출 시 1점, 못 맞출시 0점
+      // 입력 : 문제의 개수 N / 둘째 줄엔 N개의 채점 결과인 0 또는 1
+      //  10    1 0 1 1 1 0 0 1 1 0
+      // 출력 : 채점 결과에 따른 가산점을 고려한 총 점수
+      // 10점 (1 + 0 + 1 + 2 + 3 + 0 + 0 + 1 + 2 + 0)
+    </script>
+  </body>
+</html>
