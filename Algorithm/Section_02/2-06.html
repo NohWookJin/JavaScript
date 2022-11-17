@@ -6,21 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-
   <body>
     <script>
-      // 11월
+      // 11월 17일 목요일
       // 섹션 2 - 06. 격자판 최대합
-      function solution() {
-        let answer;
-
+      function solution(arr) {
+        const n = arr.length;
+        let answer = Number.MIN_SAFE_INTEGER;
+        let sum = 0;
+        let sum2 = 0;
+        // 가로의 합, 세로의 합 비교
+        for (let i = 0; i < n; i++) {
+          sum = sum2 = 0;
+          for (let j = 0; j < n; j++) {
+            sum += arr[i][j];
+            sum2 += arr[j][i];
+          }
+          // 바로 각 줄의 비교를 위한 for문 안에서의 Math 메서드 사용
+          answer = Math.max(answer, sum, sum2);
+        }
+        // 대각선의 합 비교
+        sum = sum2 = 0;
+        for (let i = 0; i < n; i++) {
+          // 00 11 22 33 44
+          sum += arr[i][i];
+          // 04 13 22 31 40
+          sum2 += arr[i][n - i - 1];
+        }
+        answer = Math.max(answer, sum, sum2);
         return answer;
       }
 
-      console.log(solution());
+      let arr = [
+        [10, 13, 10, 12, 15],
+        [12, 39, 30, 23, 11],
+        [11, 25, 50, 53, 15],
+        [19, 27, 29, 37, 27],
+        [19, 13, 30, 13, 19],
+      ];
+      console.log(solution(arr));
 
-      // 입력 :
-      // 출력 :
+      // 입력 : 첫 줄에 자연수 N, 두 번째 줄부터 N줄에 걸쳐 각 줄에 N개의 자연수.
+      // 출력 : 최대합 출력
     </script>
   </body>
 </html>
